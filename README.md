@@ -25,6 +25,12 @@ O algoritmo de bordo executa em um loop contínuo dividindo-se em:
 ## 🔌 Estrutura do Circuito e Instruções de Execução
 O circuito utiliza a interface de comunicação simplificada I2C para operação do Display LCD, conectando os pinos SDA e SCL nas portas analógicas `A4` e `A5` do Arduino, minimizando o uso de barramentos elétricos. O potenciômetro está mapeado na entrada analógica `A1` e o servomotor recebe os pulsos de controle PWM na porta digital `9`.
 
+## LINK DO PROJETO WOKWI
+https://wokwi.com/projects/465037091130342401
+## LINK DA SIMULAÇÃO DO PROJETO WOKWI
+
+## LINK DO VIDEO DA SOLUÇÃO DO PROJETO
+
 **Para executar a simulação:**
 1. Copie o arquivo `diagram.json` para o ambiente do Wokwi para carregar o layout.
 2. Certifique-se de incluir a biblioteca `LiquidCrystal I2C` no gerenciador de dependências do simulador.

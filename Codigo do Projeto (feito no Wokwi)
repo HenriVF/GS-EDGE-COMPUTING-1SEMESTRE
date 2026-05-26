@@ -1,0 +1,73 @@
+//Henrique Vieira Ferreira RM569586
+//Leonardo Barrocal RM 571031
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <Servo.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+Servo painelSolar;
+
+const int PIN_LDR = A0;      
+const int PIN_TEMP = A1;     
+const int PIN_SERVO = 9;     
+
+void setup() {
+  Serial.begin(9600);
+  lcd.init();
+  lcd.backlight();
+  painelSolar.attach(PIN_SERVO);
+  painelSolar.write(0); 
+  
+  lcd.setCursor(0, 0);
+  lcd.print("FIAP CUBESAT v1.0");
+  lcd.setCursor(0, 1);
+  lcd.print("OBC INITIALIZING");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+  int luzRaw = analogRead(PIN_LDR);
+  int luzPorcentagem = map(luzRaw, 0, 1023, 0, 100); 
+  int tempRaw = analogRead(PIN_TEMP);
+  float temperatura = map(tempRaw, 0, 1023, -40, 80);
+
+  if (luzPorcentagem > 20) {
+    int angulo = map(luzPorcentagem, 21, 100, 10, 180);
+    painelSolar.write(angulo);
+  } else {
+    painelSolar.write(0); 
+  }
+
+  lcd.clear();
+  String statusMissao = "";
+  
+  if (temperatura > 50.0 || temperatura < -10.0) {
+    statusMissao = "CRITICO";
+    lcd.setCursor(0, 0);
+    lcd.print("SYS STATUS: CRIT");
+    lcd.setCursor(0, 1);
+    lcd.print("TEMP ALERT: " + String(temperatura, 1) + "C");
+  } 
+  else if (temperatura > 35.0 || luzPorcentagem < 15) {
+    statusMissao = "BAIXO CONSUMO";
+    lcd.setCursor(0, 0);
+    lcd.print("MODE: BAIXO CONSUMO");
+    lcd.setCursor(0, 1);
+    lcd.print("T:" + String(temperatura, 1) + "C L:" + String(luzPorcentagem) + "%");
+  } 
+  else {
+    statusMissao = "NOMINAL";
+    lcd.setCursor(0, 0);
+    lcd.print("SYS STATUS: OK");
+    lcd.setCursor(0, 1);
+    lcd.print("T:" + String(temperatura, 1) + "C L:" + String(luzPorcentagem) + "%");
+  }
+
+  Serial.print("📡 TELEMETRIA -> Status: " + statusMissao);
+  Serial.print(" | Temp: " + String(temperatura, 1) + "C");
+  Serial.print(" | Luz: " + String(luzPorcentagem) + "%");
+  Serial.println(" | Atuador: " + String(painelSolar.read()) + "deg");
+
+  delay(1500); 
+}

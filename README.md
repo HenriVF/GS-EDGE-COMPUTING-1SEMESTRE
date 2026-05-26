@@ -33,4 +33,4 @@ O circuito utiliza a interface de comunicação simplificada I2C para operação
 
 ## 👥 Integrantes do Grupo
 * **Nome:** Henrique Vieira Ferreira - RM:569586
-* **Nome:**Leonardo Barrocal - RM:571031
+* **Nome:** Leonardo Barrocal - RM:571031

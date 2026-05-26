@@ -43,14 +43,14 @@ void loop() {
   String statusMissao = "";
   
   if (temperatura > 50.0 || temperatura < -10.0) {
-    statusMissao = "CRITICO";
+    statusMissao = "CRITICAL";
     lcd.setCursor(0, 0);
-    lcd.print("SYS STATUS: CRIT");
+    lcd.print("SYS STATUS: CRITICO");
     lcd.setCursor(0, 1);
     lcd.print("TEMP ALERT: " + String(temperatura, 1) + "C");
   } 
   else if (temperatura > 35.0 || luzPorcentagem < 15) {
-    statusMissao = "BAIXO CONSUMO";
+    statusMissao = "LOW POWER";
     lcd.setCursor(0, 0);
     lcd.print("MODE: BAIXO CONSUMO");
     lcd.setCursor(0, 1);

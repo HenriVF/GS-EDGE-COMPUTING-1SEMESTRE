@@ -19,7 +19,7 @@ void setup() {
   painelSolar.write(0); 
   
   lcd.setCursor(0, 0);
-  lcd.print("FIAP CUBESAT v1.0");
+  lcd.print("COMPUTADOR DE BORDO (CUBESAT)");
   lcd.setCursor(0, 1);
   lcd.print("OBC INITIALIZING");
   delay(2000);

@@ -19,9 +19,9 @@ void setup() {
   painelSolar.write(0); 
   
   lcd.setCursor(0, 0);
-  lcd.print("COMPUTADOR DE BORDO (CUBESAT)");
+  lcd.print("COMPUTADOR BORDO");
   lcd.setCursor(0, 1);
-  lcd.print("OBC INITIALIZING");
+  lcd.print("INITIALIZING");
   delay(2000);
   lcd.clear();
 }

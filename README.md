@@ -28,7 +28,7 @@ O circuito utiliza a interface de comunicação simplificada I2C para operação
 ## LINK DO PROJETO WOKWI
 https://wokwi.com/projects/465037091130342401
 ## LINK DA SIMULAÇÃO DO PROJETO WOKWI
-
+https://youtu.be/7x1n1XdD-rw
 ## LINK DO VIDEO DA SOLUÇÃO DO PROJETO
 
 **Para executar a simulação:**

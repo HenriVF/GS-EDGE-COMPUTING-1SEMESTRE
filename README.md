@@ -30,7 +30,7 @@ https://wokwi.com/projects/465037091130342401
 ## LINK DA SIMULAÇÃO DO PROJETO WOKWI
 https://youtu.be/7x1n1XdD-rw
 ## LINK DO VIDEO DA SOLUÇÃO DO PROJETO
-
+https://youtu.be/opq2ltkrG1w
 **Para executar a simulação:**
 1. Copie o arquivo `diagram.json` para o ambiente do Wokwi para carregar o layout.
 2. Certifique-se de incluir a biblioteca `LiquidCrystal I2C` no gerenciador de dependências do simulador.

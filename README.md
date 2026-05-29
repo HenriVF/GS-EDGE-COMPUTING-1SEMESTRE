@@ -1,7 +1,7 @@
-# 🌌 Edge Computing - OBC de um CubeSat (Global Solution 1Semestre)
+# 🌌 Edge Computing - (PROJETO ORION) OBC de um CubeSat (Global Solution 1Semestre)
 
 ## 📋 Descrição do Projeto
-Este projeto consiste na arquitetura e prototipagem do Computador de Bordo (OBC - On-Board Computer) de um CubeSat (nanossatélite orbital). O sistema foi concebido com foco absoluto em eficiência energética crítica para o ambiente aeroespacial. Eliminando indicadores visuais locais redundantes (como LEDs), o software embarcado realiza o processamento de borda (Edge Computing) para monitorar variáveis físicas orbitais e automatizar de forma inteligente o subsistema de geração de energia fotovoltaica.
+O projeto ORION consiste na arquitetura e prototipagem do Computador de Bordo (OBC - On-Board Computer) de um CubeSat (nanossatélite orbital). O sistema foi concebido com foco absoluto em eficiência energética crítica para o ambiente aeroespacial. Eliminando indicadores visuais locais redundantes (como LEDs), o software embarcado realiza o processamento de borda (Edge Computing) para monitorar variáveis físicas orbitais e automatizar de forma inteligente o subsistema de geração de energia fotovoltaica.
 
 ## 🎯 Objetivo da Solução
 * **Gerenciamento Térmico:** Monitorar a temperatura interna do satélite, identificando janelas críticas de congelamento ou superaquecimento espacial.
